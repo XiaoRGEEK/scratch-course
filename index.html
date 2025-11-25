@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>课程目录 - Scratch编程课程</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .course-section {
+            background: white;
+            margin-bottom: 30px;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .section-title {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+        
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .course-card {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            border-color: #667eea;
+        }
+        
+        .course-card h3 {
+            color: #495057;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+        
+        .course-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+        
+        .course-info {
+            font-size: 0.9em;
+            color: #6c757d;
+        }
+        
+        .steps-count {
+            background: #667eea;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            margin-left: 5px;
+        }
+        
+        .sb3-link {
+            display: inline-block;
+            background: #28a745;
+            color: white;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-size: 0.9em;
+            transition: background 0.3s ease;
+        }
+        
+        .sb3-link:hover {
+            background: #218838;
+        }
+        
+        .no-link {
+            display: inline-block;
+            background: #6c757d;
+            color: white;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-size: 0.9em;
+            cursor: not-allowed;
+        }
+        
+        .steps-button {
+            display: inline-block;
+            background: #007bff;
+            color: white;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            margin-left: 10px;
+            font-size: 0.9em;
+            transition: background 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .steps-button:hover {
+            background: #0056b3;
+        }
+        
+        .steps-button:disabled {
+            background: #6c757d;
+            cursor: not-allowed;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+        }
+        
+        .modal-content {
+            position: relative;
+            margin: 5% auto;
+            width: 80%;
+            max-width: 800px;
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .modal-image {
+            max-width: 100%;
+            max-height: 70vh;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .modal-title {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .modal-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+        
+        .nav-button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background 0.3s ease;
+        }
+        
+        .nav-button:hover {
+            background: #0056b3;
+        }
+        
+        .nav-button:disabled {
+            background: #6c757d;
+            cursor: not-allowed;
+        }
+        
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+        
+        .close-button:hover {
+            color: #000;
+        }
+        
+        .step-counter {
+            font-size: 1em;
+            color: #666;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #6c757d;
+            border-top: 1px solid #e9ecef;
+        }
+        
+        @media (max-width: 768px) {
+            .course-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Scratch编程课程目录</h1>
+            <p>基于实际文件夹结构生成的课程目录</p>
+        </header>
+        
+        
+    <section class="course-section">
+        <h2 class="section-title">arduinosensorkit</h2>
+        <div class="course-grid">
+            
+        <div class="course-card">
+            <h3>第01课单色LED灯</h3>
+            <img src="https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第01课单色LED灯/led.jpg" alt="第01课单色LED灯" class="course-image">
+            <div class="course-info">
+                <p>步骤数量: <span class="steps-count">6</span></p>
+                <a href="https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第01课单色LED灯/单色LED.sb3" class="sb3-link" target="_blank">下载SB3文件</a>
+                <button class="steps-button" data-steps='[{"title": "00-模块接线", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第01课单色LED灯/steps/00-模块接线.jpg"}, {"title": "01-新建设备", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第01课单色LED灯/steps/01-新建设备.jpg"}, {"title": "02-模块准备", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第01课单色LED灯/steps/02-模块准备.jpg"}, {"title": "03-拼接完成", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第01课单色LED灯/steps/03-拼接完成.jpg"}, {"title": "04-上传代码", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第01课单色LED灯/steps/04-上传代码.jpg"}, {"title": "05-实验现象", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第01课单色LED灯/steps/05-实验现象.jpg"}]'>查看步骤</button>
+            </div>
+        </div>
+        
+        <div class="course-card">
+            <h3>第02课双色LED灯</h3>
+            <img src="https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第02课双色LED灯/doublecolorled.jpg" alt="第02课双色LED灯" class="course-image">
+            <div class="course-info">
+                <p>步骤数量: <span class="steps-count">5</span></p>
+                <a href="https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第02课双色LED灯/双色LED.sb3" class="sb3-link" target="_blank">下载SB3文件</a>
+                <button class="steps-button" data-steps='[{"title": "00-模块接线", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第02课双色LED灯/steps/00-模块接线.jpg"}, {"title": "01-模块准备", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第02课双色LED灯/steps/01-模块准备.jpg"}, {"title": "02-拼接完成", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第02课双色LED灯/steps/02-拼接完成.jpg"}, {"title": "03-上传代码", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第02课双色LED灯/steps/03-上传代码.jpg"}, {"title": "04-实验现象", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第02课双色LED灯/steps/04-实验现象.jpg"}]'>查看步骤</button>
+            </div>
+        </div>
+        
+        <div class="course-card">
+            <h3>第03课RGB LED灯</h3>
+            <img src="https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第03课RGB LED灯/rgbled.jpg" alt="第03课RGB LED灯" class="course-image">
+            <div class="course-info">
+                <p>步骤数量: <span class="steps-count">5</span></p>
+                <a href="https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第03课RGB LED灯/RGBLED.sb3" class="sb3-link" target="_blank">下载SB3文件</a>
+                <button class="steps-button" data-steps='[{"title": "00-模块接线", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第03课RGB LED灯/steps/00-模块接线.jpg"}, {"title": "01-模块准备", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第03课RGB LED灯/steps/01-模块准备.jpg"}, {"title": "02-拼接完成", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第03课RGB LED灯/steps/02-拼接完成.jpg"}, {"title": "03-上传代码", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第03课RGB LED灯/steps/03-上传代码.jpg"}, {"title": "04-实验现象", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第03课RGB LED灯/steps/04-实验现象.jpg"}]'>查看步骤</button>
+            </div>
+        </div>
+        
+        <div class="course-card">
+            <h3>第04课七彩LED灯</h3>
+            <img src="https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第04课七彩LED灯/led.jpg" alt="第04课七彩LED灯" class="course-image">
+            <div class="course-info">
+                <p>步骤数量: <span class="steps-count">5</span></p>
+                <a href="https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第04课七彩LED灯/七彩LED.sb3" class="sb3-link" target="_blank">下载SB3文件</a>
+                <button class="steps-button" data-steps='[{"title": "00-模块接线", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第04课七彩LED灯/steps/00-模块接线.jpg"}, {"title": "01-模块准备", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第04课七彩LED灯/steps/01-模块准备.jpg"}, {"title": "02-拼接完成", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第04课七彩LED灯/steps/02-拼接完成.jpg"}, {"title": "03-上传代码", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第04课七彩LED灯/steps/03-上传代码.jpg"}, {"title": "04-实验现象", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第04课七彩LED灯/steps/04-实验现象.jpg"}]'>查看步骤</button>
+            </div>
+        </div>
+        
+        <div class="course-card">
+            <h3>第05课按键模块</h3>
+            <img src="https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第05课按键模块/button.jpg" alt="第05课按键模块" class="course-image">
+            <div class="course-info">
+                <p>步骤数量: <span class="steps-count">5</span></p>
+                <a href="https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第05课按键模块/按键模块.sb3" class="sb3-link" target="_blank">下载SB3文件</a>
+                <button class="steps-button" data-steps='[{"title": "00-模块接线", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第05课按键模块/steps/00-模块接线.jpg"}, {"title": "01-模块准备", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第05课按键模块/steps/01-模块准备.jpg"}, {"title": "02-拼接完成", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第05课按键模块/steps/02-拼接完成.jpg"}, {"title": "03-上传代码", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第05课按键模块/steps/03-上传代码.jpg"}, {"title": "04-实验现象", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第05课按键模块/steps/04-实验现象.jpg"}]'>查看步骤</button>
+            </div>
+        </div>
+        
+        <div class="course-card">
+            <h3>第06课触摸模块</h3>
+            <img src="https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第06课触摸模块/touch.jpg" alt="第06课触摸模块" class="course-image">
+            <div class="course-info">
+                <p>步骤数量: <span class="steps-count">4</span></p>
+                <a href="https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第06课触摸模块/触摸模块.sb3" class="sb3-link" target="_blank">下载SB3文件</a>
+                <button class="steps-button" data-steps='[{"title": "01-模块准备", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第06课触摸模块/steps/01-模块准备.jpg"}, {"title": "02-拼接模块", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第06课触摸模块/steps/02-拼接模块.jpg"}, {"title": "03-上传代码", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第06课触摸模块/steps/03-上传代码.jpg"}, {"title": "04-实验现象", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第06课触摸模块/steps/04-实验现象.jpg"}]'>查看步骤</button>
+            </div>
+        </div>
+        
+        <div class="course-card">
+            <h3>第07课有源蜂鸣器</h3>
+            <img src="https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第07课有源蜂鸣器/buzzer.jpg" alt="第07课有源蜂鸣器" class="course-image">
+            <div class="course-info">
+                <p>步骤数量: <span class="steps-count">5</span></p>
+                <a href="https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第07课有源蜂鸣器/有源蜂鸣器.sb3" class="sb3-link" target="_blank">下载SB3文件</a>
+                <button class="steps-button" data-steps='[{"title": "00-模块接线", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第07课有源蜂鸣器/steps/00-模块接线.jpg"}, {"title": "01-模块准备", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第07课有源蜂鸣器/steps/01-模块准备.jpg"}, {"title": "02-拼接完成", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第07课有源蜂鸣器/steps/02-拼接完成.jpg"}, {"title": "03-上传代码", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第07课有源蜂鸣器/steps/03-上传代码.jpg"}, {"title": "04-实验现象", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第07课有源蜂鸣器/steps/04-实验现象.jpg"}]'>查看步骤</button>
+            </div>
+        </div>
+        
+        <div class="course-card">
+            <h3>第08课水位监测模块</h3>
+            <img src="https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第08课水位监测模块/waterLevel.jpg" alt="第08课水位监测模块" class="course-image">
+            <div class="course-info">
+                <p>步骤数量: <span class="steps-count">5</span></p>
+                <a href="https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第08课水位监测模块/水位监测模块.sb3" class="sb3-link" target="_blank">下载SB3文件</a>
+                <button class="steps-button" data-steps='[{"title": "00-模块接线", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第08课水位监测模块/steps/00-模块接线.jpg"}, {"title": "01-模块准备", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第08课水位监测模块/steps/01-模块准备.jpg"}, {"title": "02-拼接完成", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第08课水位监测模块/steps/02-拼接完成.jpg"}, {"title": "03-上传代码", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第08课水位监测模块/steps/03-上传代码.jpg"}, {"title": "04-实验现象", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第08课水位监测模块/steps/04-实验现象.jpg"}]'>查看步骤</button>
+            </div>
+        </div>
+        
+        <div class="course-card">
+            <h3>第09课倾斜模块</h3>
+            <img src="https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第09课倾斜模块/tilt.jpg" alt="第09课倾斜模块" class="course-image">
+            <div class="course-info">
+                <p>步骤数量: <span class="steps-count">5</span></p>
+                <a href="https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第09课倾斜模块/倾斜模块.sb3" class="sb3-link" target="_blank">下载SB3文件</a>
+                <button class="steps-button" data-steps='[{"title": "00-模块接线", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第09课倾斜模块/steps/00-模块接线.jpg"}, {"title": "01-模块准备", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第09课倾斜模块/steps/01-模块准备.jpg"}, {"title": "02-拼接完成", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第09课倾斜模块/steps/02-拼接完成.jpg"}, {"title": "03-上传代码", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第09课倾斜模块/steps/03-上传代码.jpg"}, {"title": "04-实验现象", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第09课倾斜模块/steps/04-实验现象.jpg"}]'>查看步骤</button>
+            </div>
+        </div>
+        
+        <div class="course-card">
+            <h3>第10课光敏模块</h3>
+            <img src="https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第10课光敏模块/photosensitiveDigital.jpg" alt="第10课光敏模块" class="course-image">
+            <div class="course-info">
+                <p>步骤数量: <span class="steps-count">5</span></p>
+                <a href="https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第10课光敏模块/光敏模块.sb3" class="sb3-link" target="_blank">下载SB3文件</a>
+                <button class="steps-button" data-steps='[{"title": "00-模块接线", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第10课光敏模块/steps/00-模块接线.jpg"}, {"title": "01-模块准备", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第10课光敏模块/steps/01-模块准备.jpg"}, {"title": "02-拼接完成", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第10课光敏模块/steps/02-拼接完成.jpg"}, {"title": "03-上传代码", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第10课光敏模块/steps/03-上传代码.jpg"}, {"title": "04-实验现象", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第10课光敏模块/steps/04-实验现象.jpg"}]'>查看步骤</button>
+            </div>
+        </div>
+        
+        <div class="course-card">
+            <h3>第11课声音传感器</h3>
+            <img src="https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第11课声音传感器/reed.jpg" alt="第11课声音传感器" class="course-image">
+            <div class="course-info">
+                <p>步骤数量: <span class="steps-count">5</span></p>
+                <a href="https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第11课声音传感器/声音传感器.sb3" class="sb3-link" target="_blank">下载SB3文件</a>
+                <button class="steps-button" data-steps='[{"title": "00-模块接线", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第11课声音传感器/steps/00-模块接线.jpg"}, {"title": "01-模块准备", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第11课声音传感器/steps/01-模块准备.jpg"}, {"title": "02-拼接完成", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第11课声音传感器/steps/02-拼接完成.jpg"}, {"title": "03-上传代码", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第11课声音传感器/steps/03-上传代码.jpg"}, {"title": "04-实验现象", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第11课声音传感器/steps/04-实验现象.jpg"}]'>查看步骤</button>
+            </div>
+        </div>
+        
+        <div class="course-card">
+            <h3>第12课火焰传感器</h3>
+            <img src="https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第12课火焰传感器/flame.jpg" alt="第12课火焰传感器" class="course-image">
+            <div class="course-info">
+                <p>步骤数量: <span class="steps-count">5</span></p>
+                <a href="https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第12课火焰传感器/火焰传感器.sb3" class="sb3-link" target="_blank">下载SB3文件</a>
+                <button class="steps-button" data-steps='[{"title": "00-模块接线", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第12课火焰传感器/steps/00-模块接线.jpg"}, {"title": "01-模块准备", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第12课火焰传感器/steps/01-模块准备.jpg"}, {"title": "02-拼接完成", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第12课火焰传感器/steps/02-拼接完成.jpg"}, {"title": "03-上传代码", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第12课火焰传感器/steps/03-上传代码.jpg"}, {"title": "04-实验现象", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第12课火焰传感器/steps/04-实验现象.jpg"}]'>查看步骤</button>
+            </div>
+        </div>
+        
+        <div class="course-card">
+            <h3>第13课继电器模块</h3>
+            <img src="https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第13课继电器模块/relay.jpg" alt="第13课继电器模块" class="course-image">
+            <div class="course-info">
+                <p>步骤数量: <span class="steps-count">5</span></p>
+                <a href="https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第13课继电器模块/继电器模块.sb3" class="sb3-link" target="_blank">下载SB3文件</a>
+                <button class="steps-button" data-steps='[{"title": "00-模块接线", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第13课继电器模块/steps/00-模块接线.jpg"}, {"title": "01-模块准备", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第13课继电器模块/steps/01-模块准备.jpg"}, {"title": "02-拼接模块", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第13课继电器模块/steps/02-拼接模块.jpg"}, {"title": "03-上传代码", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第13课继电器模块/steps/03-上传代码.jpg"}, {"title": "04-实验现象", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第13课继电器模块/steps/04-实验现象.jpg"}]'>查看步骤</button>
+            </div>
+        </div>
+        
+        <div class="course-card">
+            <h3>第14课U型对射模块</h3>
+            <img src="https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第14课U型对射模块/ucounter.jpg" alt="第14课U型对射模块" class="course-image">
+            <div class="course-info">
+                <p>步骤数量: <span class="steps-count">5</span></p>
+                <a href="https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第14课U型对射模块/U型对射模块.sb3" class="sb3-link" target="_blank">下载SB3文件</a>
+                <button class="steps-button" data-steps='[{"title": "00-模块接线", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第14课U型对射模块/steps/00-模块接线.jpg"}, {"title": "01-模块准备", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第14课U型对射模块/steps/01-模块准备.jpg"}, {"title": "02-拼接模块", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第14课U型对射模块/steps/02-拼接模块.jpg"}, {"title": "03-上传代码", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第14课U型对射模块/steps/03-上传代码.jpg"}, {"title": "04-实验现象", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第14课U型对射模块/steps/04-实验现象.jpg"}]'>查看步骤</button>
+            </div>
+        </div>
+        
+        <div class="course-card">
+            <h3>第15课电位器模块</h3>
+            <img src="https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第15课电位器模块/potentiometer.jpg" alt="第15课电位器模块" class="course-image">
+            <div class="course-info">
+                <p>步骤数量: <span class="steps-count">5</span></p>
+                <span class="no-link">暂无文件</span>
+                <button class="steps-button" data-steps='[{"title": "00-模块接线", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第15课电位器模块/steps/00-模块接线.jpg"}, {"title": "01-模块主板", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第15课电位器模块/steps/01-模块主板.jpg"}, {"title": "02-拼接模块", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第15课电位器模块/steps/02-拼接模块.jpg"}, {"title": "03-上传代码", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第15课电位器模块/steps/03-上传代码.jpg"}, {"title": "04-实验现象", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第15课电位器模块/steps/04-实验现象.jpg"}]'>查看步骤</button>
+            </div>
+        </div>
+        
+        <div class="course-card">
+            <h3>第16课人体触摸</h3>
+            <img src="https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第16课人体触摸/bodytouch.jpg" alt="第16课人体触摸" class="course-image">
+            <div class="course-info">
+                <p>步骤数量: <span class="steps-count">5</span></p>
+                <a href="https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第16课人体触摸/人体触摸.sb3" class="sb3-link" target="_blank">下载SB3文件</a>
+                <button class="steps-button" data-steps='[{"title": "00-模块接线", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第16课人体触摸/steps/00-模块接线.jpg"}, {"title": "01-模块准备", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第16课人体触摸/steps/01-模块准备.jpg"}, {"title": "02-拼接模块", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第16课人体触摸/steps/02-拼接模块.jpg"}, {"title": "03-上传代码", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第16课人体触摸/steps/03-上传代码.jpg"}, {"title": "04-实验现象", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第16课人体触摸/steps/04-实验现象.jpg"}]'>查看步骤</button>
+            </div>
+        </div>
+        
+        <div class="course-card">
+            <h3>第17课人体感应</h3>
+            <img src="https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第17课人体感应/bodyInduction.jpg" alt="第17课人体感应" class="course-image">
+            <div class="course-info">
+                <p>步骤数量: <span class="steps-count">5</span></p>
+                <a href="https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第17课人体感应/人体感应.sb3" class="sb3-link" target="_blank">下载SB3文件</a>
+                <button class="steps-button" data-steps='[{"title": "00-模块接线", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第17课人体感应/steps/00-模块接线.jpg"}, {"title": "01-模块准备", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第17课人体感应/steps/01-模块准备.jpg"}, {"title": "02-拼接模块", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第17课人体感应/steps/02-拼接模块.jpg"}, {"title": "03-上传代码", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第17课人体感应/steps/03-上传代码.jpg"}, {"title": "04-实验现象", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第17课人体感应/steps/04-实验现象.jpg"}]'>查看步骤</button>
+            </div>
+        </div>
+        
+        <div class="course-card">
+            <h3>第18课干簧管</h3>
+            <img src="https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第18课干簧管/reed.jpg" alt="第18课干簧管" class="course-image">
+            <div class="course-info">
+                <p>步骤数量: <span class="steps-count">5</span></p>
+                <a href="https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第18课干簧管/干簧管.sb3" class="sb3-link" target="_blank">下载SB3文件</a>
+                <button class="steps-button" data-steps='[{"title": "00-模块接线", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第18课干簧管/steps/00-模块接线.jpg"}, {"title": "01-模块准备", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第18课干簧管/steps/01-模块准备.jpg"}, {"title": "02-拼接模块", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第18课干簧管/steps/02-拼接模块.jpg"}, {"title": "03-上传代码", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第18课干簧管/steps/03-上传代码.jpg"}, {"title": "04-实验现象", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第18课干簧管/steps/04-实验现象.jpg"}]'>查看步骤</button>
+            </div>
+        </div>
+        
+        <div class="course-card">
+            <h3>第19课激光模块</h3>
+            <img src="https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第19课激光模块/laser.jpg" alt="第19课激光模块" class="course-image">
+            <div class="course-info">
+                <p>步骤数量: <span class="steps-count">5</span></p>
+                <a href="https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第19课激光模块/激光模块.sb3" class="sb3-link" target="_blank">下载SB3文件</a>
+                <button class="steps-button" data-steps='[{"title": "00-模块接线", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第19课激光模块/steps/00-模块接线.jpg"}, {"title": "01-模块准备", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第19课激光模块/steps/01-模块准备.jpg"}, {"title": "02-拼接模块", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第19课激光模块/steps/02-拼接模块.jpg"}, {"title": "03-上传代码", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第19课激光模块/steps/03-上传代码.jpg"}, {"title": "04-实验现象", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第19课激光模块/steps/04-实验现象.jpg"}]'>查看步骤</button>
+            </div>
+        </div>
+        
+        <div class="course-card">
+            <h3>第20课敲击模块</h3>
+            <img src="https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第20课敲击模块/knock.jpg" alt="第20课敲击模块" class="course-image">
+            <div class="course-info">
+                <p>步骤数量: <span class="steps-count">5</span></p>
+                <a href="https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第20课敲击模块/敲击模块.sb3" class="sb3-link" target="_blank">下载SB3文件</a>
+                <button class="steps-button" data-steps='[{"title": "00-模块接线", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第20课敲击模块/steps/00-模块接线.jpg"}, {"title": "01-模块准备", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第20课敲击模块/steps/01-模块准备.jpg"}, {"title": "02-拼接模块", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第20课敲击模块/steps/02-拼接模块.jpg"}, {"title": "03-上传代码", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第20课敲击模块/steps/03-上传代码.jpg"}, {"title": "04-实验现象", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第20课敲击模块/steps/04-实验现象.jpg"}]'>查看步骤</button>
+            </div>
+        </div>
+        
+        <div class="course-card">
+            <h3>第21课红外循迹模块</h3>
+            <img src="https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第21课红外循迹模块/infrared.jpg" alt="第21课红外循迹模块" class="course-image">
+            <div class="course-info">
+                <p>步骤数量: <span class="steps-count">5</span></p>
+                <a href="https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第21课红外循迹模块/红外循迹.sb3" class="sb3-link" target="_blank">下载SB3文件</a>
+                <button class="steps-button" data-steps='[{"title": "00-模块接线", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第21课红外循迹模块/steps/00-模块接线.jpg"}, {"title": "01-模块准备", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第21课红外循迹模块/steps/01-模块准备.jpg"}, {"title": "02-拼接模块", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第21课红外循迹模块/steps/02-拼接模块.jpg"}, {"title": "03-上传代码", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第21课红外循迹模块/steps/03-上传代码.jpg"}, {"title": "04-实验现象", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第21课红外循迹模块/steps/04-实验现象.jpg"}]'>查看步骤</button>
+            </div>
+        </div>
+        
+        <div class="course-card">
+            <h3>第22课土壤湿度检测模块</h3>
+            <img src="https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第22课土壤湿度检测模块/soiltemperatureandhumidity.jpg" alt="第22课土壤湿度检测模块" class="course-image">
+            <div class="course-info">
+                <p>步骤数量: <span class="steps-count">5</span></p>
+                <a href="https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第22课土壤湿度检测模块/土壤湿度检测.sb3" class="sb3-link" target="_blank">下载SB3文件</a>
+                <button class="steps-button" data-steps='[{"title": "00-模块接线", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第22课土壤湿度检测模块/steps/00-模块接线.jpg"}, {"title": "01-模块准备", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第22课土壤湿度检测模块/steps/01-模块准备.jpg"}, {"title": "02-拼接模块", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第22课土壤湿度检测模块/steps/02-拼接模块.jpg"}, {"title": "03-上传代码", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第22课土壤湿度检测模块/steps/03-上传代码.jpg"}, {"title": "04-实验现象", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第22课土壤湿度检测模块/steps/04-实验现象.jpg"}]'>查看步骤</button>
+            </div>
+        </div>
+        
+        <div class="course-card">
+            <h3>第23课雨滴检测传感器</h3>
+            <img src="https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第23课雨滴检测传感器/raindrop.jpg" alt="第23课雨滴检测传感器" class="course-image">
+            <div class="course-info">
+                <p>步骤数量: <span class="steps-count">5</span></p>
+                <a href="https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第23课雨滴检测传感器/雨滴检测传感器.sb3" class="sb3-link" target="_blank">下载SB3文件</a>
+                <button class="steps-button" data-steps='[{"title": "00-模块接线", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第23课雨滴检测传感器/steps/00-模块接线.jpg"}, {"title": "01-模块准备", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第23课雨滴检测传感器/steps/01-模块准备.jpg"}, {"title": "02-拼接模块", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第23课雨滴检测传感器/steps/02-拼接模块.jpg"}, {"title": "03-上传代码", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第23课雨滴检测传感器/steps/03-上传代码.jpg"}, {"title": "04-实验现象", "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第23课雨滴检测传感器/steps/04-实验现象.jpg"}]'>查看步骤</button>
+            </div>
+        </div>
+        
+        </div>
+    </section>
+    
+    <section class="course-section">
+        <h2 class="section-title">wulibot</h2>
+        <div class="course-grid">
+            
+        <div class="course-card">
+            <h3>第01课小小巡逻兵</h3>
+            <img src="https://xiaorgeek.github.io/scratch-course/course/wulibot/第01课小小巡逻兵/小小巡逻兵.jpg" alt="第01课小小巡逻兵" class="course-image">
+            <div class="course-info">
+                <p>步骤数量: <span class="steps-count">4</span></p>
+                <a href="https://xiaorgeek.github.io/scratch-course/course/wulibot/第01课小小巡逻兵/01.sb3" class="sb3-link" target="_blank">下载SB3文件</a>
+                <button class="steps-button" data-steps='[{"title": "01-新建", "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第01课小小巡逻兵/steps/01-新建.jpg"}, {"title": "02-模块准备", "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第01课小小巡逻兵/steps/02-模块准备.jpg"}, {"title": "03-成果", "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第01课小小巡逻兵/steps/03-成果.jpg"}, {"title": "04-执行", "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第01课小小巡逻兵/steps/04-执行.jpg"}]'>查看步骤</button>
+            </div>
+        </div>
+        
+        <div class="course-card">
+            <h3>第02课跟随主人走</h3>
+            <img src="https://xiaorgeek.github.io/scratch-course/course/wulibot/第02课跟随主人走/跟随主人走.jpg" alt="第02课跟随主人走" class="course-image">
+            <div class="course-info">
+                <p>步骤数量: <span class="steps-count">3</span></p>
+                <a href="https://xiaorgeek.github.io/scratch-course/course/wulibot/第02课跟随主人走/跟随主人走.sb3" class="sb3-link" target="_blank">下载SB3文件</a>
+                <button class="steps-button" data-steps='[{"title": "01-模块准备", "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第02课跟随主人走/steps/01-模块准备.jpg"}, {"title": "02-成果", "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第02课跟随主人走/steps/02-成果.jpg"}, {"title": "03-执行", "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第02课跟随主人走/steps/03-执行.jpg"}]'>查看步骤</button>
+            </div>
+        </div>
+        
+        <div class="course-card">
+            <h3>第03课我与主人的距离</h3>
+            <img src="https://xiaorgeek.github.io/scratch-course/course/wulibot/第03课我与主人的距离/我与主人之间的距离.jpg" alt="第03课我与主人的距离" class="course-image">
+            <div class="course-info">
+                <p>步骤数量: <span class="steps-count">3</span></p>
+                <a href="https://xiaorgeek.github.io/scratch-course/course/wulibot/第03课我与主人的距离/03.sb3" class="sb3-link" target="_blank">下载SB3文件</a>
+                <button class="steps-button" data-steps='[{"title": "01-模块准备", "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第03课我与主人的距离/steps/01-模块准备.jpg"}, {"title": "02-成果", "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第03课我与主人的距离/steps/02-成果.jpg"}, {"title": "03-执行", "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第03课我与主人的距离/steps/03-执行.jpg"}]'>查看步骤</button>
+            </div>
+        </div>
+        
+        <div class="course-card">
+            <h3>第04课迷宫探险</h3>
+            <img src="https://xiaorgeek.github.io/scratch-course/course/wulibot/第04课迷宫探险/迷宫探险.jpg" alt="第04课迷宫探险" class="course-image">
+            <div class="course-info">
+                <p>步骤数量: <span class="steps-count">3</span></p>
+                <a href="https://xiaorgeek.github.io/scratch-course/course/wulibot/第04课迷宫探险/04.sb3" class="sb3-link" target="_blank">下载SB3文件</a>
+                <button class="steps-button" data-steps='[{"title": "01-模块准备", "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第04课迷宫探险/steps/01-模块准备.jpg"}, {"title": "02-成果", "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第04课迷宫探险/steps/02-成果.jpg"}, {"title": "03-执行", "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第04课迷宫探险/steps/03-执行.jpg"}]'>查看步骤</button>
+            </div>
+        </div>
+        
+        <div class="course-card">
+            <h3>第05课小小搬运工</h3>
+            <img src="https://xiaorgeek.github.io/scratch-course/course/wulibot/第05课小小搬运工/小小搬运工.jpg" alt="第05课小小搬运工" class="course-image">
+            <div class="course-info">
+                <p>步骤数量: <span class="steps-count">3</span></p>
+                <a href="https://xiaorgeek.github.io/scratch-course/course/wulibot/第05课小小搬运工/05.sb3" class="sb3-link" target="_blank">下载SB3文件</a>
+                <button class="steps-button" data-steps='[{"title": "01-模块准备", "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第05课小小搬运工/steps/01-模块准备.jpg"}, {"title": "02-成果", "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第05课小小搬运工/steps/02-成果.jpg"}, {"title": "03-执行", "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第05课小小搬运工/steps/03-执行.jpg"}]'>查看步骤</button>
+            </div>
+        </div>
+        
+        <div class="course-card">
+            <h3>第06课小司机停车</h3>
+            <img src="https://xiaorgeek.github.io/scratch-course/course/wulibot/第06课小司机停车/小司机停车.jpg" alt="第06课小司机停车" class="course-image">
+            <div class="course-info">
+                <p>步骤数量: <span class="steps-count">3</span></p>
+                <a href="https://xiaorgeek.github.io/scratch-course/course/wulibot/第06课小司机停车/06.sb3" class="sb3-link" target="_blank">下载SB3文件</a>
+                <button class="steps-button" data-steps='[{"title": "01-模块准备", "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第06课小司机停车/steps/01-模块准备.jpg"}, {"title": "02-成果", "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第06课小司机停车/steps/02-成果.jpg"}, {"title": "03-执行", "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第06课小司机停车/steps/03-执行.jpg"}]'>查看步骤</button>
+            </div>
+        </div>
+        
+        <div class="course-card">
+            <h3>第07课照亮前行</h3>
+            <img src="https://xiaorgeek.github.io/scratch-course/course/wulibot/第07课照亮前行/照亮前行.jpg" alt="第07课照亮前行" class="course-image">
+            <div class="course-info">
+                <p>步骤数量: <span class="steps-count">3</span></p>
+                <a href="https://xiaorgeek.github.io/scratch-course/course/wulibot/第07课照亮前行/07.sb3" class="sb3-link" target="_blank">下载SB3文件</a>
+                <button class="steps-button" data-steps='[{"title": "01-模块准备", "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第07课照亮前行/steps/01-模块准备.jpg"}, {"title": "02-成果", "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第07课照亮前行/steps/02-成果.jpg"}, {"title": "03-执行", "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第07课照亮前行/steps/03-执行.jpg"}]'>查看步骤</button>
+            </div>
+        </div>
+        
+        <div class="course-card">
+            <h3>第08课手势控制</h3>
+            <img src="https://xiaorgeek.github.io/scratch-course/course/wulibot/第08课手势控制/手势控制.jpg" alt="第08课手势控制" class="course-image">
+            <div class="course-info">
+                <p>步骤数量: <span class="steps-count">3</span></p>
+                <a href="https://xiaorgeek.github.io/scratch-course/course/wulibot/第08课手势控制/手势控制.sb3" class="sb3-link" target="_blank">下载SB3文件</a>
+                <button class="steps-button" data-steps='[{"title": "01-模块准备", "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第08课手势控制/steps/01-模块准备.jpg"}, {"title": "02-成果", "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第08课手势控制/steps/02-成果.jpg"}, {"title": "03-执行", "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第08课手势控制/steps/03-执行.jpg"}]'>查看步骤</button>
+            </div>
+        </div>
+        
+        <div class="course-card">
+            <h3>第09课字符显示</h3>
+            <img src="https://xiaorgeek.github.io/scratch-course/course/wulibot/第09课字符显示/字符显示.jpg" alt="第09课字符显示" class="course-image">
+            <div class="course-info">
+                <p>步骤数量: <span class="steps-count">3</span></p>
+                <a href="https://xiaorgeek.github.io/scratch-course/course/wulibot/第09课字符显示/09.sb3" class="sb3-link" target="_blank">下载SB3文件</a>
+                <button class="steps-button" data-steps='[{"title": "01-模块准备", "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第09课字符显示/steps/01-模块准备.jpg"}, {"title": "02-成果", "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第09课字符显示/steps/02-成果.jpg"}, {"title": "03-执行", "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第09课字符显示/steps/03-执行.jpg"}]'>查看步骤</button>
+            </div>
+        </div>
+        
+        <div class="course-card">
+            <h3>第10课瓦力画画</h3>
+            <img src="https://xiaorgeek.github.io/scratch-course/course/wulibot/第10课瓦力画画/瓦力画画.jpg" alt="第10课瓦力画画" class="course-image">
+            <div class="course-info">
+                <p>步骤数量: <span class="steps-count">3</span></p>
+                <a href="https://xiaorgeek.github.io/scratch-course/course/wulibot/第10课瓦力画画/10.sb3" class="sb3-link" target="_blank">下载SB3文件</a>
+                <button class="steps-button" data-steps='[{"title": "01-模块准备", "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第10课瓦力画画/steps/01-模块准备.jpg"}, {"title": "02-成果", "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第10课瓦力画画/steps/02-成果.jpg"}, {"title": "03-执行", "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第10课瓦力画画/steps/03-执行.jpg"}]'>查看步骤</button>
+            </div>
+        </div>
+        
+        <div class="course-card">
+            <h3>第11课若即若离</h3>
+            <img src="https://xiaorgeek.github.io/scratch-course/course/wulibot/第11课若即若离/若即若离.jpg" alt="第11课若即若离" class="course-image">
+            <div class="course-info">
+                <p>步骤数量: <span class="steps-count">3</span></p>
+                <a href="https://xiaorgeek.github.io/scratch-course/course/wulibot/第11课若即若离/11.sb3" class="sb3-link" target="_blank">下载SB3文件</a>
+                <button class="steps-button" data-steps='[{"title": "01-模块准备", "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第11课若即若离/steps/01-模块准备.jpg"}, {"title": "02-成果", "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第11课若即若离/steps/02-成果.jpg"}, {"title": "03-执行", "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第11课若即若离/steps/03-执行.jpg"}]'>查看步骤</button>
+            </div>
+        </div>
+        
+        <div class="course-card">
+            <h3>第12课小小音乐家</h3>
+            <img src="https://xiaorgeek.github.io/scratch-course/course/wulibot/第12课小小音乐家/小小音乐家.jpg" alt="第12课小小音乐家" class="course-image">
+            <div class="course-info">
+                <p>步骤数量: <span class="steps-count">3</span></p>
+                <a href="https://xiaorgeek.github.io/scratch-course/course/wulibot/第12课小小音乐家/12.sb3" class="sb3-link" target="_blank">下载SB3文件</a>
+                <button class="steps-button" data-steps='[{"title": "01-模块准备", "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第12课小小音乐家/steps/01-模块准备.jpg"}, {"title": "02-成果", "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第12课小小音乐家/steps/02-成果.jpg"}, {"title": "03-执行", "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第12课小小音乐家/steps/03-执行.jpg"}]'>查看步骤</button>
+            </div>
+        </div>
+        
+        <div class="course-card">
+            <h3>第13课巡线彩灯</h3>
+            <img src="https://xiaorgeek.github.io/scratch-course/course/wulibot/第13课巡线彩灯/巡线彩灯.jpg" alt="第13课巡线彩灯" class="course-image">
+            <div class="course-info">
+                <p>步骤数量: <span class="steps-count">3</span></p>
+                <a href="https://xiaorgeek.github.io/scratch-course/course/wulibot/第13课巡线彩灯/13.sb3" class="sb3-link" target="_blank">下载SB3文件</a>
+                <button class="steps-button" data-steps='[{"title": "01-模块准备", "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第13课巡线彩灯/steps/01-模块准备.jpg"}, {"title": "02-成果", "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第13课巡线彩灯/steps/02-成果.jpg"}, {"title": "03-执行", "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第13课巡线彩灯/steps/03-执行.jpg"}]'>查看步骤</button>
+            </div>
+        </div>
+        
+        <div class="course-card">
+            <h3>第14课红外遥控</h3>
+            <img src="https://xiaorgeek.github.io/scratch-course/course/wulibot/第14课红外遥控/红外遥控.jpg" alt="第14课红外遥控" class="course-image">
+            <div class="course-info">
+                <p>步骤数量: <span class="steps-count">3</span></p>
+                <a href="https://xiaorgeek.github.io/scratch-course/course/wulibot/第14课红外遥控/14.sb3" class="sb3-link" target="_blank">下载SB3文件</a>
+                <button class="steps-button" data-steps='[{"title": "01-模块准备", "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第14课红外遥控/steps/01-模块准备.jpg"}, {"title": "02-成果", "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第14课红外遥控/steps/02-成果.jpg"}, {"title": "03-执行", "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第14课红外遥控/steps/03-执行.jpg"}]'>查看步骤</button>
+            </div>
+        </div>
+        
+        <div class="course-card">
+            <h3>第15课接近报警</h3>
+            <img src="https://xiaorgeek.github.io/scratch-course/course/wulibot/第15课接近报警/接近报警.jpg" alt="第15课接近报警" class="course-image">
+            <div class="course-info">
+                <p>步骤数量: <span class="steps-count">3</span></p>
+                <a href="https://xiaorgeek.github.io/scratch-course/course/wulibot/第15课接近报警/15.sb3" class="sb3-link" target="_blank">下载SB3文件</a>
+                <button class="steps-button" data-steps='[{"title": "01-模块准备", "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第15课接近报警/steps/01-模块准备.jpg"}, {"title": "02-成果", "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第15课接近报警/steps/02-成果.jpg"}, {"title": "03-执行", "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第15课接近报警/steps/03-执行.jpg"}]'>查看步骤</button>
+            </div>
+        </div>
+        
+        </div>
+    </section>
+    
+        
+        <footer>
+            <p>&copy; 2025 Scratch编程课程. 所有课程资源仅供学习使用.</p>
+        </footer>
+    </div>
+    
+    <!-- 步骤弹窗 -->
+    <div id="stepsModal" class="modal">
+        <div class="modal-content">
+            <button class="close-button" onclick="closeStepsModal()">&times;</button>
+            <div id="modalTitle" class="modal-title"></div>
+            <img id="modalImage" class="modal-image" src="" alt="步骤图片">
+            <div class="modal-nav">
+                <button id="prevButton" class="nav-button" onclick="prevStep()">上一张</button>
+                <span id="stepCounter" class="step-counter">1 / 1</span>
+                <button id="nextButton" class="nav-button" onclick="nextStep()">下一张</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let currentSteps = [];
+        let currentStepIndex = 0;
+        
+        function showStepsModal(stepsData) {
+            currentSteps = JSON.parse(stepsData);
+            currentStepIndex = 0;
+            updateModal();
+            document.getElementById('stepsModal').style.display = 'block';
+        }
+        
+        // 为所有步骤按钮添加点击事件
+        document.addEventListener('DOMContentLoaded', function() {
+            const stepsButtons = document.querySelectorAll('.steps-button');
+            stepsButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const stepsData = this.getAttribute('data-steps');
+                    showStepsModal(stepsData);
+                });
+            });
+        });
+        
+        function closeStepsModal() {
+            document.getElementById('stepsModal').style.display = 'none';
+            currentSteps = [];
+            currentStepIndex = 0;
+        }
+        
+        function prevStep() {
+            if (currentStepIndex > 0) {
+                currentStepIndex--;
+                updateModal();
+            }
+        }
+        
+        function nextStep() {
+            if (currentStepIndex < currentSteps.length - 1) {
+                currentStepIndex++;
+                updateModal();
+            }
+        }
+        
+        function updateModal() {
+            if (currentSteps.length === 0) return;
+            
+            const step = currentSteps[currentStepIndex];
+            document.getElementById('modalTitle').textContent = step.title;
+            document.getElementById('modalImage').src = step.image;
+            document.getElementById('stepCounter').textContent = `${currentStepIndex + 1} / ${currentSteps.length}`;
+            
+            // 更新按钮状态
+            document.getElementById('prevButton').disabled = currentStepIndex === 0;
+            document.getElementById('nextButton').disabled = currentStepIndex === currentSteps.length - 1;
+        }
+        
+        // 点击弹窗外部关闭
+        window.onclick = function(event) {
+            const modal = document.getElementById('stepsModal');
+            if (event.target === modal) {
+                closeStepsModal();
+            }
+        }
+        
+        // 键盘导航
+        document.addEventListener('keydown', function(event) {
+            const modal = document.getElementById('stepsModal');
+            if (modal.style.display === 'block') {
+                if (event.key === 'ArrowLeft') {
+                    prevStep();
+                } else if (event.key === 'ArrowRight') {
+                    nextStep();
+                } else if (event.key === 'Escape') {
+                    closeStepsModal();
+                }
+            }
+        });
+    </script>
+</body>
+</html>

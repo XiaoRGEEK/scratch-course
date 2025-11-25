@@ -1,0 +1,1029 @@
+{
+    "code": 200,
+    "data": {
+        "arduinosensorkit_第01课单色LED灯": {
+            "tags": [
+                "arduinosensorkit"
+            ],
+            "name": "第01课单色LED灯",
+            "img": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第01课单色LED灯/led.jpg",
+            "uri": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第01课单色LED灯/单色LED.sb3",
+            "steps": [
+                {
+                    "title": "00-模块接线",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第01课单色LED灯/steps/00-模块接线.jpg"
+                },
+                {
+                    "title": "01-新建设备",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第01课单色LED灯/steps/01-新建设备.jpg"
+                },
+                {
+                    "title": "02-模块准备",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第01课单色LED灯/steps/02-模块准备.jpg"
+                },
+                {
+                    "title": "03-拼接完成",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第01课单色LED灯/steps/03-拼接完成.jpg"
+                },
+                {
+                    "title": "04-上传代码",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第01课单色LED灯/steps/04-上传代码.jpg"
+                },
+                {
+                    "title": "05-实验现象",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第01课单色LED灯/steps/05-实验现象.jpg"
+                }
+            ]
+        },
+        "arduinosensorkit_第02课双色LED灯": {
+            "tags": [
+                "arduinosensorkit"
+            ],
+            "name": "第02课双色LED灯",
+            "img": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第02课双色LED灯/doublecolorled.jpg",
+            "uri": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第02课双色LED灯/双色LED.sb3",
+            "steps": [
+                {
+                    "title": "00-模块接线",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第02课双色LED灯/steps/00-模块接线.jpg"
+                },
+                {
+                    "title": "01-模块准备",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第02课双色LED灯/steps/01-模块准备.jpg"
+                },
+                {
+                    "title": "02-拼接完成",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第02课双色LED灯/steps/02-拼接完成.jpg"
+                },
+                {
+                    "title": "03-上传代码",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第02课双色LED灯/steps/03-上传代码.jpg"
+                },
+                {
+                    "title": "04-实验现象",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第02课双色LED灯/steps/04-实验现象.jpg"
+                }
+            ]
+        },
+        "arduinosensorkit_第03课RGB LED灯": {
+            "tags": [
+                "arduinosensorkit"
+            ],
+            "name": "第03课RGB LED灯",
+            "img": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第03课RGB LED灯/rgbled.jpg",
+            "uri": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第03课RGB LED灯/RGBLED.sb3",
+            "steps": [
+                {
+                    "title": "00-模块接线",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第03课RGB LED灯/steps/00-模块接线.jpg"
+                },
+                {
+                    "title": "01-模块准备",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第03课RGB LED灯/steps/01-模块准备.jpg"
+                },
+                {
+                    "title": "02-拼接完成",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第03课RGB LED灯/steps/02-拼接完成.jpg"
+                },
+                {
+                    "title": "03-上传代码",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第03课RGB LED灯/steps/03-上传代码.jpg"
+                },
+                {
+                    "title": "04-实验现象",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第03课RGB LED灯/steps/04-实验现象.jpg"
+                }
+            ]
+        },
+        "arduinosensorkit_第04课七彩LED灯": {
+            "tags": [
+                "arduinosensorkit"
+            ],
+            "name": "第04课七彩LED灯",
+            "img": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第04课七彩LED灯/led.jpg",
+            "uri": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第04课七彩LED灯/七彩LED.sb3",
+            "steps": [
+                {
+                    "title": "00-模块接线",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第04课七彩LED灯/steps/00-模块接线.jpg"
+                },
+                {
+                    "title": "01-模块准备",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第04课七彩LED灯/steps/01-模块准备.jpg"
+                },
+                {
+                    "title": "02-拼接完成",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第04课七彩LED灯/steps/02-拼接完成.jpg"
+                },
+                {
+                    "title": "03-上传代码",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第04课七彩LED灯/steps/03-上传代码.jpg"
+                },
+                {
+                    "title": "04-实验现象",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第04课七彩LED灯/steps/04-实验现象.jpg"
+                }
+            ]
+        },
+        "arduinosensorkit_第05课按键模块": {
+            "tags": [
+                "arduinosensorkit"
+            ],
+            "name": "第05课按键模块",
+            "img": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第05课按键模块/button.jpg",
+            "uri": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第05课按键模块/按键模块.sb3",
+            "steps": [
+                {
+                    "title": "00-模块接线",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第05课按键模块/steps/00-模块接线.jpg"
+                },
+                {
+                    "title": "01-模块准备",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第05课按键模块/steps/01-模块准备.jpg"
+                },
+                {
+                    "title": "02-拼接完成",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第05课按键模块/steps/02-拼接完成.jpg"
+                },
+                {
+                    "title": "03-上传代码",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第05课按键模块/steps/03-上传代码.jpg"
+                },
+                {
+                    "title": "04-实验现象",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第05课按键模块/steps/04-实验现象.jpg"
+                }
+            ]
+        },
+        "arduinosensorkit_第06课触摸模块": {
+            "tags": [
+                "arduinosensorkit"
+            ],
+            "name": "第06课触摸模块",
+            "img": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第06课触摸模块/touch.jpg",
+            "uri": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第06课触摸模块/触摸模块.sb3",
+            "steps": [
+                {
+                    "title": "01-模块准备",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第06课触摸模块/steps/01-模块准备.jpg"
+                },
+                {
+                    "title": "02-拼接模块",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第06课触摸模块/steps/02-拼接模块.jpg"
+                },
+                {
+                    "title": "03-上传代码",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第06课触摸模块/steps/03-上传代码.jpg"
+                },
+                {
+                    "title": "04-实验现象",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第06课触摸模块/steps/04-实验现象.jpg"
+                }
+            ]
+        },
+        "arduinosensorkit_第07课有源蜂鸣器": {
+            "tags": [
+                "arduinosensorkit"
+            ],
+            "name": "第07课有源蜂鸣器",
+            "img": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第07课有源蜂鸣器/buzzer.jpg",
+            "uri": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第07课有源蜂鸣器/有源蜂鸣器.sb3",
+            "steps": [
+                {
+                    "title": "00-模块接线",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第07课有源蜂鸣器/steps/00-模块接线.jpg"
+                },
+                {
+                    "title": "01-模块准备",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第07课有源蜂鸣器/steps/01-模块准备.jpg"
+                },
+                {
+                    "title": "02-拼接完成",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第07课有源蜂鸣器/steps/02-拼接完成.jpg"
+                },
+                {
+                    "title": "03-上传代码",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第07课有源蜂鸣器/steps/03-上传代码.jpg"
+                },
+                {
+                    "title": "04-实验现象",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第07课有源蜂鸣器/steps/04-实验现象.jpg"
+                }
+            ]
+        },
+        "arduinosensorkit_第08课水位监测模块": {
+            "tags": [
+                "arduinosensorkit"
+            ],
+            "name": "第08课水位监测模块",
+            "img": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第08课水位监测模块/waterLevel.jpg",
+            "uri": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第08课水位监测模块/水位监测模块.sb3",
+            "steps": [
+                {
+                    "title": "00-模块接线",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第08课水位监测模块/steps/00-模块接线.jpg"
+                },
+                {
+                    "title": "01-模块准备",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第08课水位监测模块/steps/01-模块准备.jpg"
+                },
+                {
+                    "title": "02-拼接完成",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第08课水位监测模块/steps/02-拼接完成.jpg"
+                },
+                {
+                    "title": "03-上传代码",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第08课水位监测模块/steps/03-上传代码.jpg"
+                },
+                {
+                    "title": "04-实验现象",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第08课水位监测模块/steps/04-实验现象.jpg"
+                }
+            ]
+        },
+        "arduinosensorkit_第09课倾斜模块": {
+            "tags": [
+                "arduinosensorkit"
+            ],
+            "name": "第09课倾斜模块",
+            "img": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第09课倾斜模块/tilt.jpg",
+            "uri": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第09课倾斜模块/倾斜模块.sb3",
+            "steps": [
+                {
+                    "title": "00-模块接线",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第09课倾斜模块/steps/00-模块接线.jpg"
+                },
+                {
+                    "title": "01-模块准备",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第09课倾斜模块/steps/01-模块准备.jpg"
+                },
+                {
+                    "title": "02-拼接完成",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第09课倾斜模块/steps/02-拼接完成.jpg"
+                },
+                {
+                    "title": "03-上传代码",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第09课倾斜模块/steps/03-上传代码.jpg"
+                },
+                {
+                    "title": "04-实验现象",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第09课倾斜模块/steps/04-实验现象.jpg"
+                }
+            ]
+        },
+        "arduinosensorkit_第10课光敏模块": {
+            "tags": [
+                "arduinosensorkit"
+            ],
+            "name": "第10课光敏模块",
+            "img": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第10课光敏模块/photosensitiveDigital.jpg",
+            "uri": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第10课光敏模块/光敏模块.sb3",
+            "steps": [
+                {
+                    "title": "00-模块接线",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第10课光敏模块/steps/00-模块接线.jpg"
+                },
+                {
+                    "title": "01-模块准备",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第10课光敏模块/steps/01-模块准备.jpg"
+                },
+                {
+                    "title": "02-拼接完成",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第10课光敏模块/steps/02-拼接完成.jpg"
+                },
+                {
+                    "title": "03-上传代码",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第10课光敏模块/steps/03-上传代码.jpg"
+                },
+                {
+                    "title": "04-实验现象",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第10课光敏模块/steps/04-实验现象.jpg"
+                }
+            ]
+        },
+        "arduinosensorkit_第11课声音传感器": {
+            "tags": [
+                "arduinosensorkit"
+            ],
+            "name": "第11课声音传感器",
+            "img": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第11课声音传感器/reed.jpg",
+            "uri": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第11课声音传感器/声音传感器.sb3",
+            "steps": [
+                {
+                    "title": "00-模块接线",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第11课声音传感器/steps/00-模块接线.jpg"
+                },
+                {
+                    "title": "01-模块准备",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第11课声音传感器/steps/01-模块准备.jpg"
+                },
+                {
+                    "title": "02-拼接完成",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第11课声音传感器/steps/02-拼接完成.jpg"
+                },
+                {
+                    "title": "03-上传代码",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第11课声音传感器/steps/03-上传代码.jpg"
+                },
+                {
+                    "title": "04-实验现象",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第11课声音传感器/steps/04-实验现象.jpg"
+                }
+            ]
+        },
+        "arduinosensorkit_第12课火焰传感器": {
+            "tags": [
+                "arduinosensorkit"
+            ],
+            "name": "第12课火焰传感器",
+            "img": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第12课火焰传感器/flame.jpg",
+            "uri": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第12课火焰传感器/火焰传感器.sb3",
+            "steps": [
+                {
+                    "title": "00-模块接线",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第12课火焰传感器/steps/00-模块接线.jpg"
+                },
+                {
+                    "title": "01-模块准备",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第12课火焰传感器/steps/01-模块准备.jpg"
+                },
+                {
+                    "title": "02-拼接完成",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第12课火焰传感器/steps/02-拼接完成.jpg"
+                },
+                {
+                    "title": "03-上传代码",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第12课火焰传感器/steps/03-上传代码.jpg"
+                },
+                {
+                    "title": "04-实验现象",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第12课火焰传感器/steps/04-实验现象.jpg"
+                }
+            ]
+        },
+        "arduinosensorkit_第13课继电器模块": {
+            "tags": [
+                "arduinosensorkit"
+            ],
+            "name": "第13课继电器模块",
+            "img": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第13课继电器模块/relay.jpg",
+            "uri": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第13课继电器模块/继电器模块.sb3",
+            "steps": [
+                {
+                    "title": "00-模块接线",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第13课继电器模块/steps/00-模块接线.jpg"
+                },
+                {
+                    "title": "01-模块准备",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第13课继电器模块/steps/01-模块准备.jpg"
+                },
+                {
+                    "title": "02-拼接模块",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第13课继电器模块/steps/02-拼接模块.jpg"
+                },
+                {
+                    "title": "03-上传代码",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第13课继电器模块/steps/03-上传代码.jpg"
+                },
+                {
+                    "title": "04-实验现象",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第13课继电器模块/steps/04-实验现象.jpg"
+                }
+            ]
+        },
+        "arduinosensorkit_第14课U型对射模块": {
+            "tags": [
+                "arduinosensorkit"
+            ],
+            "name": "第14课U型对射模块",
+            "img": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第14课U型对射模块/ucounter.jpg",
+            "uri": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第14课U型对射模块/U型对射模块.sb3",
+            "steps": [
+                {
+                    "title": "00-模块接线",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第14课U型对射模块/steps/00-模块接线.jpg"
+                },
+                {
+                    "title": "01-模块准备",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第14课U型对射模块/steps/01-模块准备.jpg"
+                },
+                {
+                    "title": "02-拼接模块",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第14课U型对射模块/steps/02-拼接模块.jpg"
+                },
+                {
+                    "title": "03-上传代码",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第14课U型对射模块/steps/03-上传代码.jpg"
+                },
+                {
+                    "title": "04-实验现象",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第14课U型对射模块/steps/04-实验现象.jpg"
+                }
+            ]
+        },
+        "arduinosensorkit_第15课电位器模块": {
+            "tags": [
+                "arduinosensorkit"
+            ],
+            "name": "第15课电位器模块",
+            "img": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第15课电位器模块/potentiometer.jpg",
+            "uri": null,
+            "steps": [
+                {
+                    "title": "00-模块接线",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第15课电位器模块/steps/00-模块接线.jpg"
+                },
+                {
+                    "title": "01-模块主板",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第15课电位器模块/steps/01-模块主板.jpg"
+                },
+                {
+                    "title": "02-拼接模块",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第15课电位器模块/steps/02-拼接模块.jpg"
+                },
+                {
+                    "title": "03-上传代码",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第15课电位器模块/steps/03-上传代码.jpg"
+                },
+                {
+                    "title": "04-实验现象",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第15课电位器模块/steps/04-实验现象.jpg"
+                }
+            ]
+        },
+        "arduinosensorkit_第16课人体触摸": {
+            "tags": [
+                "arduinosensorkit"
+            ],
+            "name": "第16课人体触摸",
+            "img": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第16课人体触摸/bodytouch.jpg",
+            "uri": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第16课人体触摸/人体触摸.sb3",
+            "steps": [
+                {
+                    "title": "00-模块接线",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第16课人体触摸/steps/00-模块接线.jpg"
+                },
+                {
+                    "title": "01-模块准备",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第16课人体触摸/steps/01-模块准备.jpg"
+                },
+                {
+                    "title": "02-拼接模块",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第16课人体触摸/steps/02-拼接模块.jpg"
+                },
+                {
+                    "title": "03-上传代码",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第16课人体触摸/steps/03-上传代码.jpg"
+                },
+                {
+                    "title": "04-实验现象",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第16课人体触摸/steps/04-实验现象.jpg"
+                }
+            ]
+        },
+        "arduinosensorkit_第17课人体感应": {
+            "tags": [
+                "arduinosensorkit"
+            ],
+            "name": "第17课人体感应",
+            "img": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第17课人体感应/bodyInduction.jpg",
+            "uri": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第17课人体感应/人体感应.sb3",
+            "steps": [
+                {
+                    "title": "00-模块接线",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第17课人体感应/steps/00-模块接线.jpg"
+                },
+                {
+                    "title": "01-模块准备",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第17课人体感应/steps/01-模块准备.jpg"
+                },
+                {
+                    "title": "02-拼接模块",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第17课人体感应/steps/02-拼接模块.jpg"
+                },
+                {
+                    "title": "03-上传代码",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第17课人体感应/steps/03-上传代码.jpg"
+                },
+                {
+                    "title": "04-实验现象",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第17课人体感应/steps/04-实验现象.jpg"
+                }
+            ]
+        },
+        "arduinosensorkit_第18课干簧管": {
+            "tags": [
+                "arduinosensorkit"
+            ],
+            "name": "第18课干簧管",
+            "img": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第18课干簧管/reed.jpg",
+            "uri": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第18课干簧管/干簧管.sb3",
+            "steps": [
+                {
+                    "title": "00-模块接线",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第18课干簧管/steps/00-模块接线.jpg"
+                },
+                {
+                    "title": "01-模块准备",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第18课干簧管/steps/01-模块准备.jpg"
+                },
+                {
+                    "title": "02-拼接模块",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第18课干簧管/steps/02-拼接模块.jpg"
+                },
+                {
+                    "title": "03-上传代码",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第18课干簧管/steps/03-上传代码.jpg"
+                },
+                {
+                    "title": "04-实验现象",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第18课干簧管/steps/04-实验现象.jpg"
+                }
+            ]
+        },
+        "arduinosensorkit_第19课激光模块": {
+            "tags": [
+                "arduinosensorkit"
+            ],
+            "name": "第19课激光模块",
+            "img": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第19课激光模块/laser.jpg",
+            "uri": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第19课激光模块/激光模块.sb3",
+            "steps": [
+                {
+                    "title": "00-模块接线",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第19课激光模块/steps/00-模块接线.jpg"
+                },
+                {
+                    "title": "01-模块准备",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第19课激光模块/steps/01-模块准备.jpg"
+                },
+                {
+                    "title": "02-拼接模块",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第19课激光模块/steps/02-拼接模块.jpg"
+                },
+                {
+                    "title": "03-上传代码",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第19课激光模块/steps/03-上传代码.jpg"
+                },
+                {
+                    "title": "04-实验现象",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第19课激光模块/steps/04-实验现象.jpg"
+                }
+            ]
+        },
+        "arduinosensorkit_第20课敲击模块": {
+            "tags": [
+                "arduinosensorkit"
+            ],
+            "name": "第20课敲击模块",
+            "img": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第20课敲击模块/knock.jpg",
+            "uri": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第20课敲击模块/敲击模块.sb3",
+            "steps": [
+                {
+                    "title": "00-模块接线",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第20课敲击模块/steps/00-模块接线.jpg"
+                },
+                {
+                    "title": "01-模块准备",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第20课敲击模块/steps/01-模块准备.jpg"
+                },
+                {
+                    "title": "02-拼接模块",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第20课敲击模块/steps/02-拼接模块.jpg"
+                },
+                {
+                    "title": "03-上传代码",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第20课敲击模块/steps/03-上传代码.jpg"
+                },
+                {
+                    "title": "04-实验现象",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第20课敲击模块/steps/04-实验现象.jpg"
+                }
+            ]
+        },
+        "arduinosensorkit_第21课红外循迹模块": {
+            "tags": [
+                "arduinosensorkit"
+            ],
+            "name": "第21课红外循迹模块",
+            "img": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第21课红外循迹模块/infrared.jpg",
+            "uri": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第21课红外循迹模块/红外循迹.sb3",
+            "steps": [
+                {
+                    "title": "00-模块接线",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第21课红外循迹模块/steps/00-模块接线.jpg"
+                },
+                {
+                    "title": "01-模块准备",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第21课红外循迹模块/steps/01-模块准备.jpg"
+                },
+                {
+                    "title": "02-拼接模块",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第21课红外循迹模块/steps/02-拼接模块.jpg"
+                },
+                {
+                    "title": "03-上传代码",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第21课红外循迹模块/steps/03-上传代码.jpg"
+                },
+                {
+                    "title": "04-实验现象",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第21课红外循迹模块/steps/04-实验现象.jpg"
+                }
+            ]
+        },
+        "arduinosensorkit_第22课土壤湿度检测模块": {
+            "tags": [
+                "arduinosensorkit"
+            ],
+            "name": "第22课土壤湿度检测模块",
+            "img": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第22课土壤湿度检测模块/soiltemperatureandhumidity.jpg",
+            "uri": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第22课土壤湿度检测模块/土壤湿度检测.sb3",
+            "steps": [
+                {
+                    "title": "00-模块接线",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第22课土壤湿度检测模块/steps/00-模块接线.jpg"
+                },
+                {
+                    "title": "01-模块准备",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第22课土壤湿度检测模块/steps/01-模块准备.jpg"
+                },
+                {
+                    "title": "02-拼接模块",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第22课土壤湿度检测模块/steps/02-拼接模块.jpg"
+                },
+                {
+                    "title": "03-上传代码",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第22课土壤湿度检测模块/steps/03-上传代码.jpg"
+                },
+                {
+                    "title": "04-实验现象",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第22课土壤湿度检测模块/steps/04-实验现象.jpg"
+                }
+            ]
+        },
+        "arduinosensorkit_第23课雨滴检测传感器": {
+            "tags": [
+                "arduinosensorkit"
+            ],
+            "name": "第23课雨滴检测传感器",
+            "img": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第23课雨滴检测传感器/raindrop.jpg",
+            "uri": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第23课雨滴检测传感器/雨滴检测传感器.sb3",
+            "steps": [
+                {
+                    "title": "00-模块接线",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第23课雨滴检测传感器/steps/00-模块接线.jpg"
+                },
+                {
+                    "title": "01-模块准备",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第23课雨滴检测传感器/steps/01-模块准备.jpg"
+                },
+                {
+                    "title": "02-拼接模块",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第23课雨滴检测传感器/steps/02-拼接模块.jpg"
+                },
+                {
+                    "title": "03-上传代码",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第23课雨滴检测传感器/steps/03-上传代码.jpg"
+                },
+                {
+                    "title": "04-实验现象",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/arduinosensorkit/第23课雨滴检测传感器/steps/04-实验现象.jpg"
+                }
+            ]
+        },
+        "wulibot_第01课小小巡逻兵": {
+            "tags": [
+                "wulibot"
+            ],
+            "name": "第01课小小巡逻兵",
+            "img": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第01课小小巡逻兵/小小巡逻兵.jpg",
+            "uri": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第01课小小巡逻兵/01.sb3",
+            "steps": [
+                {
+                    "title": "01-新建",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第01课小小巡逻兵/steps/01-新建.jpg"
+                },
+                {
+                    "title": "02-模块准备",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第01课小小巡逻兵/steps/02-模块准备.jpg"
+                },
+                {
+                    "title": "03-成果",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第01课小小巡逻兵/steps/03-成果.jpg"
+                },
+                {
+                    "title": "04-执行",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第01课小小巡逻兵/steps/04-执行.jpg"
+                }
+            ]
+        },
+        "wulibot_第02课跟随主人走": {
+            "tags": [
+                "wulibot"
+            ],
+            "name": "第02课跟随主人走",
+            "img": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第02课跟随主人走/跟随主人走.jpg",
+            "uri": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第02课跟随主人走/跟随主人走.sb3",
+            "steps": [
+                {
+                    "title": "01-模块准备",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第02课跟随主人走/steps/01-模块准备.jpg"
+                },
+                {
+                    "title": "02-成果",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第02课跟随主人走/steps/02-成果.jpg"
+                },
+                {
+                    "title": "03-执行",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第02课跟随主人走/steps/03-执行.jpg"
+                }
+            ]
+        },
+        "wulibot_第03课我与主人的距离": {
+            "tags": [
+                "wulibot"
+            ],
+            "name": "第03课我与主人的距离",
+            "img": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第03课我与主人的距离/我与主人之间的距离.jpg",
+            "uri": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第03课我与主人的距离/03.sb3",
+            "steps": [
+                {
+                    "title": "01-模块准备",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第03课我与主人的距离/steps/01-模块准备.jpg"
+                },
+                {
+                    "title": "02-成果",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第03课我与主人的距离/steps/02-成果.jpg"
+                },
+                {
+                    "title": "03-执行",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第03课我与主人的距离/steps/03-执行.jpg"
+                }
+            ]
+        },
+        "wulibot_第04课迷宫探险": {
+            "tags": [
+                "wulibot"
+            ],
+            "name": "第04课迷宫探险",
+            "img": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第04课迷宫探险/迷宫探险.jpg",
+            "uri": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第04课迷宫探险/04.sb3",
+            "steps": [
+                {
+                    "title": "01-模块准备",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第04课迷宫探险/steps/01-模块准备.jpg"
+                },
+                {
+                    "title": "02-成果",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第04课迷宫探险/steps/02-成果.jpg"
+                },
+                {
+                    "title": "03-执行",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第04课迷宫探险/steps/03-执行.jpg"
+                }
+            ]
+        },
+        "wulibot_第05课小小搬运工": {
+            "tags": [
+                "wulibot"
+            ],
+            "name": "第05课小小搬运工",
+            "img": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第05课小小搬运工/小小搬运工.jpg",
+            "uri": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第05课小小搬运工/05.sb3",
+            "steps": [
+                {
+                    "title": "01-模块准备",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第05课小小搬运工/steps/01-模块准备.jpg"
+                },
+                {
+                    "title": "02-成果",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第05课小小搬运工/steps/02-成果.jpg"
+                },
+                {
+                    "title": "03-执行",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第05课小小搬运工/steps/03-执行.jpg"
+                }
+            ]
+        },
+        "wulibot_第06课小司机停车": {
+            "tags": [
+                "wulibot"
+            ],
+            "name": "第06课小司机停车",
+            "img": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第06课小司机停车/小司机停车.jpg",
+            "uri": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第06课小司机停车/06.sb3",
+            "steps": [
+                {
+                    "title": "01-模块准备",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第06课小司机停车/steps/01-模块准备.jpg"
+                },
+                {
+                    "title": "02-成果",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第06课小司机停车/steps/02-成果.jpg"
+                },
+                {
+                    "title": "03-执行",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第06课小司机停车/steps/03-执行.jpg"
+                }
+            ]
+        },
+        "wulibot_第07课照亮前行": {
+            "tags": [
+                "wulibot"
+            ],
+            "name": "第07课照亮前行",
+            "img": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第07课照亮前行/照亮前行.jpg",
+            "uri": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第07课照亮前行/07.sb3",
+            "steps": [
+                {
+                    "title": "01-模块准备",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第07课照亮前行/steps/01-模块准备.jpg"
+                },
+                {
+                    "title": "02-成果",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第07课照亮前行/steps/02-成果.jpg"
+                },
+                {
+                    "title": "03-执行",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第07课照亮前行/steps/03-执行.jpg"
+                }
+            ]
+        },
+        "wulibot_第08课手势控制": {
+            "tags": [
+                "wulibot"
+            ],
+            "name": "第08课手势控制",
+            "img": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第08课手势控制/手势控制.jpg",
+            "uri": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第08课手势控制/手势控制.sb3",
+            "steps": [
+                {
+                    "title": "01-模块准备",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第08课手势控制/steps/01-模块准备.jpg"
+                },
+                {
+                    "title": "02-成果",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第08课手势控制/steps/02-成果.jpg"
+                },
+                {
+                    "title": "03-执行",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第08课手势控制/steps/03-执行.jpg"
+                }
+            ]
+        },
+        "wulibot_第09课字符显示": {
+            "tags": [
+                "wulibot"
+            ],
+            "name": "第09课字符显示",
+            "img": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第09课字符显示/字符显示.jpg",
+            "uri": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第09课字符显示/09.sb3",
+            "steps": [
+                {
+                    "title": "01-模块准备",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第09课字符显示/steps/01-模块准备.jpg"
+                },
+                {
+                    "title": "02-成果",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第09课字符显示/steps/02-成果.jpg"
+                },
+                {
+                    "title": "03-执行",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第09课字符显示/steps/03-执行.jpg"
+                }
+            ]
+        },
+        "wulibot_第10课瓦力画画": {
+            "tags": [
+                "wulibot"
+            ],
+            "name": "第10课瓦力画画",
+            "img": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第10课瓦力画画/瓦力画画.jpg",
+            "uri": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第10课瓦力画画/10.sb3",
+            "steps": [
+                {
+                    "title": "01-模块准备",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第10课瓦力画画/steps/01-模块准备.jpg"
+                },
+                {
+                    "title": "02-成果",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第10课瓦力画画/steps/02-成果.jpg"
+                },
+                {
+                    "title": "03-执行",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第10课瓦力画画/steps/03-执行.jpg"
+                }
+            ]
+        },
+        "wulibot_第11课若即若离": {
+            "tags": [
+                "wulibot"
+            ],
+            "name": "第11课若即若离",
+            "img": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第11课若即若离/若即若离.jpg",
+            "uri": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第11课若即若离/11.sb3",
+            "steps": [
+                {
+                    "title": "01-模块准备",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第11课若即若离/steps/01-模块准备.jpg"
+                },
+                {
+                    "title": "02-成果",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第11课若即若离/steps/02-成果.jpg"
+                },
+                {
+                    "title": "03-执行",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第11课若即若离/steps/03-执行.jpg"
+                }
+            ]
+        },
+        "wulibot_第12课小小音乐家": {
+            "tags": [
+                "wulibot"
+            ],
+            "name": "第12课小小音乐家",
+            "img": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第12课小小音乐家/小小音乐家.jpg",
+            "uri": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第12课小小音乐家/12.sb3",
+            "steps": [
+                {
+                    "title": "01-模块准备",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第12课小小音乐家/steps/01-模块准备.jpg"
+                },
+                {
+                    "title": "02-成果",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第12课小小音乐家/steps/02-成果.jpg"
+                },
+                {
+                    "title": "03-执行",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第12课小小音乐家/steps/03-执行.jpg"
+                }
+            ]
+        },
+        "wulibot_第13课巡线彩灯": {
+            "tags": [
+                "wulibot"
+            ],
+            "name": "第13课巡线彩灯",
+            "img": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第13课巡线彩灯/巡线彩灯.jpg",
+            "uri": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第13课巡线彩灯/13.sb3",
+            "steps": [
+                {
+                    "title": "01-模块准备",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第13课巡线彩灯/steps/01-模块准备.jpg"
+                },
+                {
+                    "title": "02-成果",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第13课巡线彩灯/steps/02-成果.jpg"
+                },
+                {
+                    "title": "03-执行",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第13课巡线彩灯/steps/03-执行.jpg"
+                }
+            ]
+        },
+        "wulibot_第14课红外遥控": {
+            "tags": [
+                "wulibot"
+            ],
+            "name": "第14课红外遥控",
+            "img": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第14课红外遥控/红外遥控.jpg",
+            "uri": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第14课红外遥控/14.sb3",
+            "steps": [
+                {
+                    "title": "01-模块准备",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第14课红外遥控/steps/01-模块准备.jpg"
+                },
+                {
+                    "title": "02-成果",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第14课红外遥控/steps/02-成果.jpg"
+                },
+                {
+                    "title": "03-执行",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第14课红外遥控/steps/03-执行.jpg"
+                }
+            ]
+        },
+        "wulibot_第15课接近报警": {
+            "tags": [
+                "wulibot"
+            ],
+            "name": "第15课接近报警",
+            "img": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第15课接近报警/接近报警.jpg",
+            "uri": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第15课接近报警/15.sb3",
+            "steps": [
+                {
+                    "title": "01-模块准备",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第15课接近报警/steps/01-模块准备.jpg"
+                },
+                {
+                    "title": "02-成果",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第15课接近报警/steps/02-成果.jpg"
+                },
+                {
+                    "title": "03-执行",
+                    "image": "https://xiaorgeek.github.io/scratch-course/course/wulibot/第15课接近报警/steps/03-执行.jpg"
+                }
+            ]
+        }
+    }
+}
