@@ -1,0 +1,28 @@
+{
+    "data": [
+        {
+            "tag": "arduinosensorkit",
+            "text": "Arduino UNO R3传感器套装"
+        },
+        {
+            "tag": "wulibot",
+            "text": "WuLi Bot瓦力机器人"
+        },
+        {
+            "tag": "happybot",
+            "text": "Happybot小蓝人机器人"
+        },
+        {
+            "tag": "Mibit",
+            "text": "Mibit小车"
+        },
+        {
+            "tag": "arduinods",
+            "text": "Arduino DS WiFi视频小车机器人"
+        },
+        {
+            "tag": "arduinoth",
+            "text": "Arduino TH WiFi视频小车机器人"
+        }
+    ]
+}
